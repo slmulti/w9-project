@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# multiverse-w9-project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+| Features 	| As a user...                                                                      	|
+|----------	|-----------------------------------------------------------------------------------	|
+| Tier 1   	| I want to view all items in the inventory.<br>I want to view any individual item. 	|
+| Tier 3   	| I want to remove an item from the inventory.                                      	|
+| Tier 4   	| I want to remove an item from the inventory.                                      	|
+| Tier 5   	| CSS or Pick your next feature.                                                    	|
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## User Stories
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Objective: Students will collaborative build an Inventory App for a Local Warehouse
 
-### `npm test`
+### Tier I — MVP Application
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* As a User, I want to view all items in inventory
+	* Sequelize Model for Item
+	* Name, Description, Price, Category, Image
+	* Express Route to GET all Items
+	* Front-end View for all Items
 
-### `npm run build`
+* As a User, I want to view any individual item 
+	* Express Route to GET one Item
+	* Front-end view for one item (click to see)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Tier II — Adding an Item
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* As a User, I want to add an item by completing a form
+	* Add Item front-end form
+	* Express Route to ADD the Item
+	* Form or Fetch request to add item when form is submitted
 
-### `npm run eject`
+### Tier III — Deleting an Item
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* As a User, I want to  remove an item from inventory
+	* Delete button on Single Item View
+	* Express Route to DELETE the Items
+	* Fetch request to delete item when button is clicked
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ 
+### Tier IV — Updating an Item
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* As a User, I want to edit an item by filling a form
+	* Edit form on Single Item View
+	* Express Route to UPDATE the Items
+	* Fetch request to update item when form is submitted
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Tier V — Bonus Stuff
 
-## Learn More
+* As a User, I want my Inventory site to be visually stunning
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* As a User, I want to add items to a cart and purchase
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* As a User, I want to use the application on a mobile browser
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* As an Admin, I want all Add and Edit item requests to have server-side validations
