@@ -1,5 +1,10 @@
 # multiverse-w9-project
 
+## To run the project
+
+ - cd into server, do `npm install` and then `npm run dev`
+ - in a new terminal, cd into client, do `npm install` and `npm run dev`
+
 ## Overview
 
 | Features 	| As a user...                                                                      	|
