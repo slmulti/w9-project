@@ -2,14 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react';
 
-
-
 function App() {
 
-const [cards, setCards] = useState("")
+const [cards, setCards] = useState([])
 
 async function getCards() {
-const res = await fetch('http://localhost:3000/api')
+const res = await fetch('http://localhost:5000/items')
 const cardData = await res.json()
 setCards(cardData)
 }

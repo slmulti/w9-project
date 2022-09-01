@@ -1,6 +1,4 @@
-const express = require("express");
-const routerItem = require("./items")
+const express = require("express")
+const itemsRouter = require("./items")
 
-
-
-module.exports = routerItem;
+module.exports = { itemsRouter }

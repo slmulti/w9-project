@@ -1,10 +1,8 @@
-// load environment variables from .env or elsewhere
-require('dotenv').config();
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
-const path = require('path');
 const cors = require('cors');
+const { itemsRouter } = require('./routes')
 
 //Allow CORS requests
 app.use(cors());
@@ -14,11 +12,8 @@ app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// serve up static files (e.g. html and css files)
-app.use(express.static(path.join(__dirname, '../dist')));
-
-// api router
-app.use('/api', require('./routes'));
+// route handlers
+app.use('/items', itemsRouter)
 
 // 404 handler
 app.use((req, res) => {

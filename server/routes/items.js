@@ -1,13 +1,12 @@
 const express = require("express");
-const routerItem = express.Router();
-const { Item } = require("../models/inventory")
+const itemsRouter = express.Router();
+const { Item } = require("../models/Item")
 
 //GET all items
 
-routerItem.get('/', async (req, res, next) => {
+itemsRouter.get('/', async (req, res, next) => {
     try {
         const items = await Item.findAll();
-        
         res.send(items);
     } catch (error) {
         next(error);
@@ -16,7 +15,7 @@ routerItem.get('/', async (req, res, next) => {
 
 //Get one item
 
-routerItem.get('/:title', async (req, res) => {
+itemsRouter.get('/:title', async (req, res) => {
     try {
         const itemChosen = await Item.findOne({where: {title: req.params.title}})
         res.send(itemChosen)
@@ -25,4 +24,4 @@ routerItem.get('/:title', async (req, res) => {
     }
 })
 
-module.exports =  routerItem 
+module.exports =  itemsRouter 
