@@ -2,10 +2,12 @@
 
 import React, { useState, useEffect } from 'react';
 
-function Item() {
+function Item(props) {
   return (
     
-      <h1>john</h1>
+      <div>
+        <h1>{props.title}</h1>
+      </div>
     
   );
 }
