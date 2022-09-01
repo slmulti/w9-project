@@ -5,7 +5,8 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Button, CardActionArea, CardActions, Grid } from '@mui/material';
+
 
 function App() {
 
@@ -25,7 +26,9 @@ function App() {
       <div className='card'> {
         cards.map((card) => {
           return <>
-            <Card sx={{ maxWidth: 345 }}>
+          <Grid  container rowSpacing={1} columnSpacing={{xs: 1, sm: 2, md:3, gap: 2}}>
+            <Grid item xs={6}>
+            <Card sx={{ maxWidth: 345, m: 2 }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -51,6 +54,8 @@ function App() {
         </Button>
       </CardActions>
     </Card>
+    </Grid>
+    </Grid>
           </>
         })}
       </div>
