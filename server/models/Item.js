@@ -9,7 +9,7 @@ const Item = db.define('Item', {
         type: DataTypes.STRING
     },
     price: {
-        type: DataTypes.INTEGER
+        type: DataTypes.DECIMAL
     },
     description: {
         type: DataTypes.STRING
