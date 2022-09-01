@@ -7,10 +7,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions, Grid } from '@mui/material';
 
-
 function App() {
 
   const [cards, setCards] = useState([])
+  const [isClicked, setIsClicked] = useState(false)
 
   useEffect(() => {
     async function fetchItems () {
@@ -41,18 +41,19 @@ function App() {
           { card.title }
           </Typography>
           <Typography variant="body2" color="grey" key={card.id}>
-          { card.description }
-          </Typography>
-          <Typography variant="body2" color="grey" key={card.id}>
           £{ card.price }
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
       </CardActions>
+      <Button size="small" color="primary" onClick={() => setIsClicked(!isClicked)}>
+      {isClicked ? "Close Description" : "Show Description"}
+      </Button>
+        {isClicked && <Typography variant="body2" color="grey" key={card.id}>
+        { card.description }
+        </Typography>
+        }
     </Card>
     </Grid>
     </Grid>
