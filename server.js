@@ -4,7 +4,6 @@ const { db } = require("./server/db");
 const app = require("./server/app");
 const routerItem = require("./server/routes");
 const PORT = process.env.PORT || 3000;
-const PUBLIC_URL = "http://localhost:1234/"
 
 const init = async () => { 
      try {    await db.sync();
