@@ -11,11 +11,13 @@ function Item({cards}) {
 
   return (
     <>
-    {!current ? <> {cards.map((item, i) => {
+    {!current ? <Grid container direction="row"
+            justifyContent="center"
+            alignItems="center"
+            wrap="wrap"
+          > {cards.map((item, i) => {
       return (
         <div key={i}>
-        <Grid  container rowSpacing={1} columnSpacing={{xs: 1, sm: 2, md:3, gap: 2}}>
-        <Grid item xs={6}>
           <Card sx={{ maxWidth: 345, m: 2 }}>
           <CardActionArea>
             <CardMedia
@@ -38,11 +40,9 @@ function Item({cards}) {
           </CardActionArea>
           <button onClick={() => setCurrent(cards[i])}>Find out more</button>
           </Card>
-        </Grid>
-        </Grid>
         </div>
       );
-    })} </>
+    })} </Grid>
     :
     <>
         <Grid  container rowSpacing={1} columnSpacing={{xs: 1, sm: 2, md:3, gap: 2}}>
