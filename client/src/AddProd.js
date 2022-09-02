@@ -1,5 +1,8 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
+import Card from '@mui/material/Card';
+import { Grid } from '@mui/material';
+
 
 function AddProduct(){
 
@@ -47,6 +50,12 @@ function AddProduct(){
     return (
         <main>
             <form onSubmit={handleSubmit}>
+            <Grid container direction="row"
+            justifyContent="center"
+            alignItems="center"
+            wrap="wrap"
+            >
+                <Card sx={{ height: 400, width: 400, m: 2, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-around" }}>
                 <h2>Add a Product</h2>
                 <p>Please complete the form<br></br> below to add new Product</p>
                 <label></label>
@@ -56,6 +65,8 @@ function AddProduct(){
                 <input type='text' placeholder='Product Description...' value={newDescription} onChange={e=>setNewDescription(e.target.value)}/><br></br>
                 <input type='text' placeholder='category' value={newCategory} onChange={e=>setNewCategory(e.target.value)}/><br></br>
                 <button type='submit'>Submit</button>
+                </Card>
+                </Grid>
             </form>
         </main>
     )
