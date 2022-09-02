@@ -33,9 +33,6 @@ function Item({cards}) {
             <Typography variant="body2" color="grey">
             £{ item.price }
             </Typography>
-            <Typography variant="body2" color="grey">
-            { item.description }
-            </Typography>
           </CardContent>
           </CardActionArea>
           <button onClick={() => setCurrent(cards[i])}>Find out more</button>
