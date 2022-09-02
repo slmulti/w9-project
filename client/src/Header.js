@@ -4,7 +4,7 @@ function Header() {
     return(
         <div>
             <h1 className='header' >SDJ Inventory</h1>
-            <buton>Add Item</buton>
+            <button>Add Item</button>
             <button>Remove Item</button>
         </div>
     )
