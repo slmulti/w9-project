@@ -24,4 +24,11 @@ itemsRouter.get('/:title', async (req, res) => {
     }
 })
 
+// add item
+
+itemsRouter.post('/', async (req,res) => {
+    await Item.create(req.body)
+    res.sendStatus(200)
+})
+
 module.exports =  itemsRouter 
