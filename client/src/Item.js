@@ -18,7 +18,7 @@ function Item({cards}) {
           > {cards.map((item, i) => {
       return (
         <div key={i}>
-          <Card sx={{ maxWidth: 345, m: 2 }}>
+          <Card sx={{ height: 400, width: 400, m: 2, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-around" }}>
           <CardActionArea>
             <CardMedia
             component="img"
@@ -44,7 +44,7 @@ function Item({cards}) {
     <>
         <Grid  container rowSpacing={1} columnSpacing={{xs: 1, sm: 2, md:3, gap: 2}}>
         <Grid item xs={6}>
-          <Card sx={{ maxWidth: 345, m: 2 }}>
+          <Card sx={{ height: 400, width: 400, m: 2, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-around" }}>
           <CardActionArea>
             <CardMedia
             component="img"
